@@ -1,5 +1,6 @@
 private Tanque t;
 private Muro m;
+private SpawnerBalas spawner;
 
 void setup() {
   size(800, 800);
@@ -25,3 +26,6 @@ void generarMuro() {
   ImageComponent imageMuro = new ImageComponent("muro.jpg");
   m = new Muro(transformMuro, imageMuro);
 }
+void generarSpawner(){
+  Transform transformSpawner = new Transform(new PVector(100,100));
+  
