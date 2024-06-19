@@ -33,16 +33,12 @@ class Snake {
     cuerpo.add(new PVector(posicion.x, posicion.y));
     cuerpo.remove(0);
   }
-  public boolean comer(PVector comida) {
-    PVector cabeza = cuerpo.get(cuerpo.size() - 1); //Se declara al ultimo elemento del ArrayList como la cabeza de la serpiente
-    float d = dist(cabeza.x, cabeza.y, comida.x, comida.y); //Se calcula la distancia entre la cabeza de la serpiente y la comida
-
-    //Si la distancia es menor a 1, quiere decir que la serpiente ha comido
-    if (d <20) {
+  public boolean comer(PVector comida){
+    PVector cabeza = cuerpo.get(cuerpo.size() - 1); 
+    float d = dist(cabeza.x, cabeza.y, comida.x, comida.y); 
+    if (d <20){
       return true;
-    }
-    //Si la distancia no es menor a 1, entonce la serpiente no ha comido
-    else {
+    }else{
       return false;
     }
   }
